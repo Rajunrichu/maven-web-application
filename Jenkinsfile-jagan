@@ -1,0 +1,31 @@
+node{
+def mavenHome = tool name: "maven3.8.4"
+stage('Checkout code from Git'){
+git branch: 'development', credentialsId: 'bc3f2db1-67ba-4afb-b2af-d8d7fc7c292e', url: 'https://github.com/JagadeeshGajjala/maven-web-application.git'
+
+}
+stage('Initiate the Build'){
+sh "${mavenHome}/bin/mvn clean package"
+}
+/*
+stage('Execute sonar code report'){
+sh "${mavenHome}/bin/mvn sonar:sonar"
+}
+
+stage('Upload Artifacts into Nexus'){
+sh "${mavenHome}/bin/mvn deploy"
+}
+
+stage('Deploy to Tomcat'){
+sshagent(['1bd644a2-7d74-4233-ae2d-28187c0d8d59']) {
+sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.233.153.190:/opt/apache-tomcat-9.0.55/webapps/"
+}
+}
+stage('Trigger email'){
+emailext body: '''Build Log info
+
+Regards
+Jagadeesh devops''', subject: 'Build Log', to: 'jagan28.mca@gmail.com,jagadeeshkumar.sp@gmail.com'
+}
+*/
+}
