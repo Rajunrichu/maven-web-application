@@ -7,7 +7,7 @@ git branch: 'development', credentialsId: 'bc3f2db1-67ba-4afb-b2af-d8d7fc7c292e'
 stage('Initiate the Build'){
 sh "${mavenHome}/bin/mvn clean package"
 }
-/*
+
 stage('Execute sonar code report'){
 sh "${mavenHome}/bin/mvn sonar:sonar"
 }
@@ -27,5 +27,5 @@ emailext body: '''Build Log info
 Regards
 Jagadeesh devops''', subject: 'Build Log', to: 'jagan28.mca@gmail.com,jagadeeshkumar.sp@gmail.com'
 }
-*/
+
 }
