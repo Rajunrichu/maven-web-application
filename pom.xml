@@ -98,14 +98,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.233.40.8:9980/jagannexus/repository/wallmart-release/</url>
+	      <name>My Home - Rajendra Nexus Release Repository</name>
+	      <url>http://192.168.1.148:8081/repository/nexus-release-repo/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.233.40.8:9980/jagannexus/repository/walmart-snapshot/</url>
+	      <name>My Home Rajendra Nexus Snapshot Repository</name>
+	      <url>http://192.168.1.148:8081/repository/nexus-snapshot-repo/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
